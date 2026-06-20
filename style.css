@@ -1,112 +1,117 @@
-/* ===== RESET BÁSICO ===== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ===== ESTILO GENERAL ===== */
 body {
-  font-family: system-ui, Arial, sans-serif;
-  background: #0f172a;
-  color: #e2e8f0;
+  font-family: ui-sans-serif, system-ui, Arial;
+  background: #0b1220;
+  color: #e5e7eb;
   line-height: 1.6;
 }
 
 /* ===== HEADER ===== */
-header {
+.topbar {
   text-align: center;
-  padding: 50px 20px;
-  background: #1e293b;
+  padding: 40px 20px;
+  background: #111827;
+  border-bottom: 1px solid #1f2937;
 }
 
-header h1 {
-  font-size: 2.5rem;
+.topbar h1 {
+  font-size: 2.2rem;
   color: #60a5fa;
 }
 
-header p {
-  color: #94a3b8;
-  margin-top: 10px;
+.topbar p {
+  color: #9ca3af;
+  margin-top: 5px;
 }
 
 /* ===== NAV ===== */
-nav {
+.nav {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  background: #111827;
+  gap: 18px;
   padding: 12px;
+  background: #0f172a;
   flex-wrap: wrap;
 }
 
-nav a {
-  color: #e2e8f0;
+.nav a {
+  color: #e5e7eb;
   text-decoration: none;
-  font-weight: 500;
   padding: 6px 10px;
   border-radius: 6px;
+  transition: 0.2s;
 }
 
-nav a:hover {
+.nav a:hover {
   background: #1f2937;
   color: #38bdf8;
 }
 
-/* ===== SECCIONES / FICHAS ===== */
-section {
-  padding: 40px 20px;
-}
-
-.ficha {
+/* ===== LAYOUT ===== */
+.container {
   max-width: 900px;
-  margin: 20px auto;
-  background: #1e293b;
-  padding: 20px;
-  border-radius: 12px;
+  margin: 0 auto;
+  padding: 30px 20px;
 }
 
-/* layout horizontal para perfil */
-.ficha-horizontal {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.ficha img {
-  width: 150px;
+/* ===== CARDS ===== */
+.card {
+  background: #111827;
+  border: 1px solid #1f2937;
   border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 18px;
+  transition: 0.2s;
 }
 
-/* ===== TEXTOS ===== */
-h2 {
+.card:hover {
+  transform: translateY(-2px);
+  border-color: #374151;
+}
+
+.card h2 {
   color: #38bdf8;
   margin-bottom: 10px;
 }
 
-p {
-  margin-bottom: 10px;
-  color: #cbd5f5;
+/* ===== LISTAS ===== */
+ul {
+  padding-left: 18px;
 }
 
-ul {
-  padding-left: 20px;
+li {
+  margin-bottom: 6px;
+  color: #d1d5db;
+}
+
+/* ===== HIGHLIGHT CARD ===== */
+.highlight {
+  border: 1px solid #2563eb;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: #1d4ed8;
 }
 
 /* ===== FOOTER ===== */
-footer {
+.footer {
   text-align: center;
-  padding: 30px;
-  color: #64748b;
+  padding: 25px;
+  color: #6b7280;
   font-size: 0.9rem;
-}
-
-/* ===== EFECTOS SUAVES ===== */
-a, .ficha {
-  transition: all 0.2s ease;
-}
-
-.ficha:hover {
-  transform: translateY(-2px);
 }
