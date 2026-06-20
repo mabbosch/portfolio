@@ -1,0 +1,112 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== ESTILO GENERAL ===== */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+  padding: 50px 20px;
+  background: #1e293b;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #60a5fa;
+}
+
+header p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+/* ===== NAV ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #111827;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #1f2937;
+  color: #38bdf8;
+}
+
+/* ===== SECCIONES / FICHAS ===== */
+section {
+  padding: 40px 20px;
+}
+
+.ficha {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* layout horizontal para perfil */
+.ficha-horizontal {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.ficha img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+/* ===== TEXTOS ===== */
+h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+  color: #cbd5f5;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+/* ===== EFECTOS SUAVES ===== */
+a, .ficha {
+  transition: all 0.2s ease;
+}
+
+.ficha:hover {
+  transform: translateY(-2px);
+}
