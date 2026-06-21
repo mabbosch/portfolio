@@ -124,3 +124,83 @@ li{
     margin:15px auto 25px;
     border:2px solid #38bdf8;
 }
+.platform-card{
+    display:block;
+    background:#111827;
+    border:1px solid #1f2937;
+    padding:20px;
+    border-radius:12px;
+    text-decoration:none;
+    color:white;
+    transition:0.2s;
+}
+
+.platform-card:hover{
+    transform:translateY(-3px);
+    border-color:#38bdf8;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+    gap:15px;
+    margin-top:20px;
+}
+.construction{
+    border:1px dashed #38bdf8;
+    background:#0f172a;
+}
+
+.construction h2{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+.construction ul{
+    margin-top:10px;
+    padding-left:20px;
+    color:#cbd5e1;
+}
+
+.hint{
+    margin-top:15px;
+    color:#64748b;
+    font-size:0.9rem;
+    font-style:italic;
+}
+#matrix{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: black;
+}
+.contact-card{
+    border:1px solid #1f2937;
+    background:#0f172a;
+}
+
+.contact-list{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    margin-top:15px;
+}
+
+.contact-item{
+    display:block;
+    padding:12px 15px;
+    background:#111827;
+    border:1px solid #1f2937;
+    border-radius:8px;
+    color:#e2e8f0;
+    text-decoration:none;
+    transition:0.2s;
+}
+
+.contact-item:hover{
+    border-color:#38bdf8;
+    transform:translateX(5px);
+}
