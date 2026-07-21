@@ -13,7 +13,7 @@
    ========================= */
 
 body{
-    background:#0f172a;
+    background:#193065;
     color:#e2e8f0;
     font-family:"Segoe UI", sans-serif;
 }
@@ -37,24 +37,24 @@ body{
 }
 
 .logo h2{
-    color:#38bdf8;
+    color:#87d6f7;
     margin-bottom:5px;
 }
 
 .logo p{
-    color:#94a3b8;
+    color:#6e747d;
     font-size:0.9rem;
     margin-bottom:20px;
 }
 
 .profile-photo{
-    width:120px;
-    height:120px;
+    width:180px;
+    height:180px;
     object-fit:cover;
-    border-radius:50%;
+    border-radius:0%;
     display:block;
     margin:20px auto;
-    border:2px solid #38bdf8;
+    border:2px solid #000b10;
 }
 
 .sidebar nav{
@@ -91,12 +91,12 @@ section{
 }
 
 h1{
-    color:#38bdf8;
+    color:#87d6f7;
     margin-bottom:15px;
 }
 
 h2{
-    color:#38bdf8;
+    color:#87d6f7;
     margin-bottom:15px;
 }
 
