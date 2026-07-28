@@ -13,7 +13,7 @@
    ========================= */
 
 body{
-    background:#193065;
+    background:#143071;
     color:#e2e8f0;
     font-family:"Segoe UI", sans-serif;
 }
@@ -260,7 +260,7 @@ h2{
 .contact-item{
     display:block;
     padding:12px 15px;
-    background:#0f172a;
+    background:#1c3c85;
     border:1px solid #1f2937;
     border-radius:8px;
     text-decoration:none;
