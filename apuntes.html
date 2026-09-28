@@ -1,124 +1,100 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes | Marta Bargués</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apuntes y documentación técnica de Marta Bargués sobre ASIR, sistemas, redes, ciberseguridad y programación.">
+  <title>Apuntes | Marta Bargués</title>
+  <link rel="stylesheet" href="style-apuntes.css">
 </head>
 
 <body>
-<canvas id="matrix"></canvas>
 
-<div class="layout">
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <strong>MARTA BARGUÉS</strong>
+    <span>CIBERSEGURIDAD · SISTEMAS · REDES · CLOUD</span>
+  </a>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a href="index.html">INICIO</a>
+    <a href="proyectos.html">PROYECTOS</a>
+    <a href="formacion.html">FORMACIÓN</a>
+    <a class="active" href="apuntes.html">APUNTES</a>
+    <a href="writeups.html">WRITEUPS</a>
+    <a href="contacto.html">CONTACTO</a>
+  </nav>
+</header>
 
-        <div class="logo">
-            <h2>Marta Bargués</h2>
-            <p>Systems · Networks · Security</p>
+<main>
+  <section class="notes-hero">
 
-            <img src="imagen3.png" class="profile-photo" alt="profile">
-        </div>
+    <div class="hero-copy">
+      <span class="eyebrow">04 / APUNTES</span>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="apuntes.html">Apuntes</a>
-            <a href="writeups.html">Writeups</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+      <h1>
+        APUNTES &amp;<br>
+        <span>DOCUMENTACIÓN_</span>
+      </h1>
 
-    </aside>
+      <p>
+        Todo mi material de estudio está organizado y actualizado
+        en mi espacio de Notion.
+      </p>
 
-    <!-- CONTENT -->
-    <main class="content">
+      <p>
+        Apuntes de ASIR, sistemas, redes, ciberseguridad
+        y programación.
+      </p>
 
-        <section class="hero">
-            <h1>Apuntes</h1>
-            <p>
-                Apuntes técnicos, documentación y resúmenes de aprendizaje en sistemas, redes y ciberseguridad.
-            </p>
-        </section>
-
-        <section class="card">
-
-    <h2>Biblioteca de apuntes</h2>
-
-    <p>
-        Todos mis apuntes están organizados en Notion. Son, documentación, comandos,
-        laboratorios y resúmenes de estudio sobre sistemas,
-        redes y ciberseguridad.
-    </p>
-
-    <br>
-
-    <div class="tags">
-        <span>Linux</span>
-        <span>Windows</span>
-        <span>Networking</span>
-        <span>Active Directory</span>
-        <span>Docker</span>
-        <span>Virtualización</span>
-        <span>Ciberseguridad</span>
+      <a class="notion-button"
+         href="https://dramatic-waxflower-882.notion.site/Cibersecurity-stuff-82560098ea934d57a831be5a99f6a6c9?source=copy_link"
+         target="_blank"
+         rel="noopener noreferrer"
+         aria-label="Explorar mis apuntes en Notion">
+        <span class="notion-logo">N</span>
+        <span>EXPLORAR MIS APUNTES <b>EN NOTION</b> ↗</span>
+      </a>
     </div>
 
-    <br>
+    <div class="hero-visual" aria-hidden="true">
+      <img src="images/apuntes-hero.png" alt="">
+    </div>
 
-    <a class="project-button"
-       href="https://dramatic-waxflower-882.notion.site/Cibersecurity-stuff-82560098ea934d57a831be5a99f6a6c9?source=copy_link"
-       target="_blank"
-       rel="noopener noreferrer">
-        Ver apuntes en Notion →
-    </a>
+  </section>
 
-</section>
-    <p class="hint">
-    Los apuntes se actualizan de forma continua conforme voy aprendiendo nuevas tecnologías.
-    </p>
+  <section class="learning-flow" aria-label="Proceso de aprendizaje">
+    <div class="flow-item">
+      <span class="flow-icon book">▭</span>
+      <span>APRENDER</span>
+    </div>
 
-    </main>
+    <i></i>
 
-</div>
-<script>
-const canvas = document.getElementById("matrix");
-const ctx = canvas.getContext("2d");
+    <div class="flow-item">
+      <span class="flow-icon document">▤</span>
+      <span>DOCUMENTAR</span>
+    </div>
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+    <i></i>
 
-const letters = "01";
-const fontSize = 14;
-const columns = canvas.width / fontSize;
+    <div class="flow-item">
+      <span class="flow-icon practice">⚙</span>
+      <span>PRACTICAR</span>
+    </div>
 
-const drops = [];
+    <i></i>
 
-for (let x = 0; x < columns; x++) {
-    drops[x] = 1;
-}
+    <div class="flow-item apply">
+      <span class="flow-icon">▥</span>
+      <span>APLICAR</span>
+    </div>
+  </section>
 
-function draw() {
-    ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-
-    ctx.fillStyle = "rgba(56, 189, 248, 0.7)";
-    ctx.font = fontSize + "px monospace";
-
-    for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
-            drops[i] = 0;
-        }
-
-        drops[i]++;
-    }
-}
-
-setInterval(draw, 33);
-</script>
+  <div class="closing-line">
+    CONOCIMIENTO EN CONSTANTE ACTUALIZACIÓN_
+  </div>
+</main>
 
 </body>
 </html>

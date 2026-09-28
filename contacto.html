@@ -1,79 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Marta Bargués</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto | Marta Bargués</title>
+<link rel="stylesheet" href="style-contacto.css">
 </head>
 <body>
-
-<div class="layout">
-
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-
-        <div class="logo">
-            <h2>Marta Bargués</h2>
-            <p>Systems · Networks · Security</p>
-
-            <img src="imagen3.png" class="profile-photo" alt="profile">
-        </div>
-
-       <nav>
-            <a href="index.html">Home</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="apuntes.html">Apuntes</a>
-            <a href="writeups.html">Writeups</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-
-    </aside>
-
-    <!-- CONTENT -->
-    <main class="content">
-
-        <section class="hero">
-            <h1>Contacto</h1>
-            <p>
-               Open to work
-            </p>
-        </section>
-
-        <section class="card contact-card">
-
-          
-
-            <p>
-                Para contactar conmigo
-                puedes hacerlo a través de los siguientes canales:
-            </p>
-
-            <div class="contact-list">
-
-                <a href="mailto:martababosch@gmail.com" class="contact-item">
-                    Email: martababosch@gmail.com
-                </a>
-
-                <a href="https://github.com/mabbosch" target="_blank" class="contact-item">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/in/marta-bargues/" target="_blank" class="contact-item">
-                    LinkedIn
-                </a>
-
-            </div>
-
-            <p class="hint">
-                Respondo normalmente en menos de 24-48h.
-            </p>
-
-        </section>
-
-    </main>
-
+<header class="topbar">
+<a class="brand" href="index.html"><strong>MARTA BARGUÉS</strong><span>CIBERSEGURIDAD · SISTEMAS · REDES · CLOUD</span></a>
+<nav class="main-nav"><a href="index.html">INICIO</a><a href="proyectos.html">PROYECTOS</a><a href="formacion.html">FORMACIÓN</a><a href="apuntes.html">APUNTES</a><a href="writeups.html">WRITEUPS</a><a class="active" href="contacto.html">CONTACTO</a></nav>
+</header>
+<main>
+<section class="contact-layout">
+<div class="contact-copy">
+<span class="eyebrow">05 / CONTACTO</span>
+<h1>¿HABLAMOS?<span>_</span></h1>
+<p>Estoy abierta a nuevas oportunidades en ciberseguridad, sistemas y soporte IT.</p>
+<p>Si quieres contactar conmigo por una propuesta, colaboración o simplemente hablar de tecnología, puedes escribirme aquí o a través de mis redes.</p>
+<div class="open-work"><i></i><span>OPEN TO WORK</span></div>
+<div class="contact-links">
+<div class="contact-row"><strong>✉ &nbsp; EMAIL</strong><span class="line"></span><span id="emailText">martababosch@gmail.com</span><button id="copyEmail" type="button">COPIAR ⧉</button></div>
+<div class="contact-row"><strong class="cyan">in &nbsp; LINKEDIN</strong><span class="line"></span><span>Marta Bargués</span><a href="https://www.linkedin.com/in/marta-bargues/" target="_blank">ABRIR ↗</a></div>
+<div class="contact-row"><strong>● &nbsp; GITHUB</strong><span class="line"></span><span>github.com/mabbosch</span><a href="https://github.com/mabbosch" target="_blank">ABRIR ↗</a></div>
 </div>
-
-</body>
-</html>
+</div>
+<div class="form-shell">
+<div class="form-title"><span>ENVÍA UN MENSAJE</span><div><i></i><i></i><i></i></div></div>
+<form id="contactForm" action="https://formspree.io/f/mrpbowln" method="POST">
+<div class="two-fields">
+<label><span>NOMBRE <b>*</b></span><input name="nombre" type="text" placeholder="Tu nombre" required></label>
+<label><span>EMAIL <b>*</b></span><input name="email" type="email" placeholder="tu@email.com" required></label>
+</div>
+<label><span>ASUNTO</span><input name="asunto" type="text" placeholder="¿Sobre qué quieres hablar?"></label>
+<label><span>MENSAJE <b>*</b></span><textarea name="mensaje" rows="6" placeholder="Escribe aquí tu mensaje..." required></textarea></label>
+<button class="submit-button" type="submit">➤ &nbsp; ENVIAR MENSAJE &nbsp; <em>→</em></button>
+<p class="form-note" id="formNote">Añadiremos tu endpoint de Formspree para activar el envío.</p>
+</form>
+</div>
+</section>
+<footer class="portfolio-end">
+<div class="end-code">&lt;/&gt;</div><h2>GRACIAS POR VISITAR MI PORTFOLIO</h2>
+<p><span>marta@portfolio:~$</span> ready to connect<span class="cursor">_</span></p>
+</footer>
+</main>
+<script src="contacto.js"></script>
+</body></html>

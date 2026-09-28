@@ -7,108 +7,274 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="topbar">
+    <a class="brand" href="index-nuevo.html">MB<span>_portfolio</span></a>
+    <nav>
+    <a href="index.html" class="active">INICIO</a>
+    <a href="proyectos.html">PROYECTOS</a>
+    <a href="formacion.html">FORMACIÓN</a>
+    <a href="apuntes.html">APUNTES</a>
+    <a href="writeups.html">WRITEUPS</a>
+    <a href="contacto.html">CONTACTO</a>
+</nav>
+</header>
 
-<div class="layout">
-
-    <aside class="sidebar">
-
-        <div class="logo">
-            <h2>Marta Bargués</h2>
-            <p>Systems · Networks · Security</p>
-            <img src="imagen3.png" alt="Marta Bargués" class="profile-photo">
+<main>
+    <section id="inicio" class="hero">
+        <div class="hero-copy">
+            <div class="eyebrow"><span></span> 2.º ASIR · Ciberseguridad & Infraestructura</div>
+            <p class="hello">Hola, soy</p>
+            <h1>Marta<br>Bargués<span class="dot">.</span></h1>
+            <h2>Ciberseguridad · Sistemas · Redes · Cloud</h2>
+            <p class="lead">Construyo laboratorios para aprender cómo funcionan los sistemas, cómo se atacan y cómo protegerlos. Combino mi formación en ASIR y ciberseguridad con proyectos prácticos ofensivos y defensivos.</p>
+            <div class="hero-actions">
+                <a class="btn primary" href="#proyectos">Ver proyectos ↓</a>
+                <a class="btn secondary" href="#sobre-mi">Sobre mí</a>
+            </div>
         </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="apuntes.html">Apuntes</a>
-            <a href="writeups.html">Writeups</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
-
-    </aside>
-
-    <main class="content">
-
-        <section class="hero">
-            <h1>Ciberseguridad, Redes y Administración de Sistemas</h1>
-
-            <p>
-                Estudiante de ASIR con formación en ciberseguridad, sistemas,
-                redes, virtualización y  cloud.
-            </p>
-
-            <p>
-                Interesada en Sistemas,
-                Ciberseguridad, Redes y Infraestructura.
-            </p>
-        </section>
-
-        <section>
-            <h2>Skills técnicas</h2>
-
-            <div class="skills">
-
-                <div class="card">
-                    <h3>Sistemas</h3>
-                    <p>Windows Server, Ubuntu Server, Active Directory, GPO</p>
-                </div>
-
-                <div class="card">
-                    <h3>Redes</h3>
-                    <p>TCP/IP, DNS, DHCP, VLAN, VPN, Firewall</p>
-                </div>
-
-                <div class="card">
-                    <h3>Cloud</h3>
-                    <p>Azure, AWS, VNet, NSG, Azure AD</p>
-                </div>
-
-                <div class="card">
-                    <h3>Seguridad</h3>
-                    <p>Wazuh, Wireshark, OpenVAS, Nmap, Metasploit</p>
-                </div>
-
+        <div class="hero-visual">
+            <div class="avatar-frame">
+                <img src="images/imagen3.png" alt="Avatar tecnológico de Marta Bargués">
             </div>
-        </section>
-
-        <section>
-            <h2>Formación</h2>
-
-            <div class="card">
-                <ul>
-                    <li>CFGS ASIR (en curso)</li>
-                    <li>CP3 Seguridad Informática</li>
-                    <li>Ciberseguridad en entornos híbridos (950h)</li>
-                    <li>Microsoft SC-900</li>
-                    <li>Programación con Python</li>
-                </ul>
+            <div class="terminal">
+                <div class="terminal-bar"><i></i><i></i><i></i><span>marta@portfolio:~</span></div>
+                <div class="terminal-body" id="terminal-output" aria-label="Terminal animado"></div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section>
-            <h2>Proyectos destacados</h2>
+    <section id="sobre-mi" class="about section-grid">
+        <div class="section-heading">
+            <span>01 / PERFIL</span>
+            <h2>Montar, probar,<br>entender y proteger.</h2>
+        </div>
+        <div class="about-copy">
+            <p>Actualmente curso segundo de ASIR y he orientado mi formación hacia la ciberseguridad. Me interesan tanto la parte defensiva como la ofensiva, sin dejar de lado sistemas, redes e infraestructura.</p>
+            <div class="stats">
+                <div><strong>SC-900</strong><span>Microsoft</span></div>
+                <div><strong>164+</strong><span>TryHackMe rooms</span></div>
+                <div><strong>950 h</strong><span>Cyber híbrida</span></div>
+                <div><strong>ASIR</strong><span>2.º curso</span></div>
+            </div>
+        </div>
+    </section>
 
-            <a class="project-card" href="proyectos.html">
-                <h3>Despliegue de un honeypot en AWS y análisis de actividad maliciosa real</h3>
+    <section id="proyectos" class="projects-section">
+        <div class="section-title-row">
+            <div><span class="section-number">02 / LABORATORIO</span><h2>Proyectos destacados</h2></div>
+            <a href="proyectos.html">Ver todos →</a>
+        </div>
+
+        <div class="project-grid project-grid-v2">
+            <a class="project-card-v2 phishing-card" href="proyectos.html">
+                <div class="project-image-wrap">
+                    <img src="images/phishing-lab.png" alt="Ilustración del laboratorio de phishing con GoPhish, Postfix, Dovecot y Windows" class="project-image">
+                </div>
+                <div class="project-copy-v2">
+                    <small>PHISHING · LAB</small>
+                    <h3>Laboratorio de simulación de Phishing</h3>
+                    <p>Entorno controlado con GoPhish, Postfix/Dovecot y Windows para simular y analizar una campaña de phishing.</p>
+                    <div class="tags"><span>GoPhish</span><span>Postfix</span><span>Dovecot</span><span>Windows</span></div>
+                    <span class="project-arrow">→</span>
+                </div>
             </a>
 
-            <a class="project-card" href="proyectos.html">
-                <h3>Implementación de técnicas de Deception en un Honeypot Web con Wazuh</h3>
+            <a class="project-card-v2 honeypot-card" href="proyectos.html">
+                <div class="project-image-wrap">
+                    <img src="images/honeypot-lab.png" alt="Ilustración de un honeypot Cowrie en AWS monitorizado con Wazuh" class="project-image">
+                </div>
+                <div class="project-copy-v2">
+                    <small>DECEPTION · SIEM</small>
+                    <h3>Honeypot en AWS + Wazuh</h3>
+                    <p>Cowrie expuesto en AWS para registrar actividad maliciosa real y analizar los eventos mediante Wazuh.</p>
+                    <div class="tags"><span>AWS</span><span>Cowrie</span><span>Wazuh</span><span>Deception</span></div>
+                    <span class="project-arrow">→</span>
+                </div>
             </a>
 
-            <a class="project-card" href="proyectos.html">
-                <h3>Análisis comparativo del comportamiento de distintos tipos de malware</h3>
+            <a class="project-card-v2 writeup-card" href="writeups.html">
+                <div class="project-image-wrap">
+                    <img src="images/writeups.png" alt="Ilustración de laboratorio de máquinas vulnerables Linux y Windows con documentación de writeups" class="project-image">
+                </div>
+                <div class="project-copy-v2">
+                    <small>OFFENSIVE · LAB</small>
+                    <h3>Máquinas vulnerables &amp; Writeups</h3>
+                    <p>Enumeración, explotación en laboratorio y documentación paso a paso de retos y máquinas vulnerables.</p>
+                    <div class="tags"><span>Nmap</span><span>Linux</span><span>Windows</span><span>Writeups</span></div>
+                    <span class="project-arrow">→</span>
+                </div>
             </a>
+        </div>
+    </section>
 
-            <a class="project-card" href="proyectos.html">
-                <h3>Laboratorio de Simulación de Phishing</h3>
-            </a>
-        </section>
+    <section id="areas" class="areas-section">
+        <span class="section-number">03 / ÁREAS</span>
+        <div class="areas">
+            <div><h3>Ciberseguridad</h3><p>SOC · Pentesting · Hardening · Malware</p></div>
+            <div><h3>Sistemas</h3><p>Linux · Windows Server · Active Directory</p></div>
+            <div><h3>Redes</h3><p>VLAN · VPN · Routing · Firewalls</p></div>
+            <div><h3>Cloud</h3><p>AWS · Azure · Infraestructura</p></div>
+        </div>
+        <div class="section-more">
+            <a href="apuntes.html">Ver apuntes <span>→</span></a>
+        </div>
+    </section>
 
-    </main>
+    <section id="formacion" class="formation-section">
+        <div class="formation-heading">
+            <span class="section-number">04 / FORMACIÓN</span>
+            <h2>Un camino que sigue creciendo<span class="dot">.</span></h2>
+            <p>Mi formación ha ido sumando sistemas, redes y ciberseguridad, combinando base técnica, especialización y práctica.</p>
+        </div>
 
-</div>
+        <div class="learning-path" aria-label="Recorrido formativo">
+            <svg class="learning-line" viewBox="0 0 1000 330" preserveAspectRatio="none" aria-hidden="true">
+                <path class="learning-line-base" d="M35 285 C150 280 190 250 285 238 S445 210 525 175 S675 155 735 112 S875 75 965 38"/>
+                <path class="learning-line-progress" d="M35 285 C150 280 190 250 285 238 S445 210 525 175 S675 155 735 112 S875 75 965 38"/>
+            </svg>
 
+            <article class="milestone m1">
+                <span class="milestone-dot"></span>
+                <small>BASE</small>
+                <strong>Ciberseguridad y Hacking Ético</strong>
+                <em>+ Cisco Networking Academy</em>
+            </article>
+
+            <article class="milestone m2">
+                <span class="milestone-dot"></span>
+                <small>ESPECIALIZACIÓN</small>
+                <strong>Ciberseguridad en entornos híbridos</strong>
+                <em>950 horas</em>
+            </article>
+
+            <article class="milestone m3">
+                <span class="milestone-dot"></span>
+                <small>CERTIFICADO PROFESIONAL</small>
+                <strong>Seguridad Informática</strong>
+                <em>Formación especializada</em>
+            </article>
+
+            <article class="milestone m4">
+                <span class="milestone-dot"></span>
+                <small>CERTIFICACIÓN + CÓDIGO</small>
+                <strong>Microsoft SC-900</strong>
+                <em>Programación con Python</em>
+            </article>
+
+            <article class="milestone m5 current">
+                <span class="milestone-dot"></span>
+                <small>EN CURSO · 2.º</small>
+                <strong>CFGS ASIR</strong>
+                <em>2025 — 2027</em>
+            </article>
+
+            <div class="path-future" aria-hidden="true">··· →</div>
+        </div>
+        <div class="section-more formation-more">
+            <a href="formacion.html">Ver formación completa <span>→</span></a>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact-strip contact-v2">
+        <div class="contact-copy">
+            <span>05 / CONTACTO</span>
+            <h2>¿Hablamos<span class="dot">?</span></h2>
+            <p>Abierta a nuevas oportunidades profesionales en ciberseguridad, sistemas y redes, con ganas de seguir aprendiendo y creciendo en el sector IT.</p>
+            <a class="btn primary" href="contacto.html">Contactar →</a>
+        </div>
+
+        <div class="contact-terminal" aria-label="Estado profesional">
+            <div class="contact-terminal-bar">
+                <i></i><i></i><i></i>
+                <span>marta@portfolio:~</span>
+            </div>
+            <div class="contact-terminal-body">
+                <p><b>$</b> status</p>
+                <p class="contact-output open">→ OPEN TO WORK</p>
+                <p class="contact-command"><b>$</b> focus</p>
+                <p class="contact-output">→ security · systems · networks</p>
+                <p class="contact-prompt"><b>$</b> <span></span></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer><span>© 2026 Marta Bargués</span><span>Learning by doing.</span></footer>
+<script>
+const terminal = document.getElementById("terminal-output");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const terminalSequence = [
+    { type: "command", text: "whoami" },
+    { type: "output", text: "Estudiante ASIR · Cybersecurity" },
+    { type: "command", text: "cat interests.txt" },
+    { type: "output", text: "Cybersecurity" },
+    { type: "output", text: "Offensive & Defensive Security" },
+    { type: "output", text: "Networks & Infrastructure" },
+    { type: "output", text: "Cloud" },
+    { type: "command", text: "status" },
+    { type: "status", text: "● learning_by_doing" }
+];
+
+const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+function addCursor() {
+    const line = document.createElement("p");
+    line.className = "terminal-prompt-final";
+    line.innerHTML = '<b>›</b> <span class="terminal-cursor" aria-hidden="true"></span>';
+    terminal.appendChild(line);
+}
+
+async function typeCommand(text) {
+    const line = document.createElement("p");
+    const prompt = document.createElement("b");
+    prompt.textContent = "›";
+    const typed = document.createElement("span");
+    typed.className = "typed-command";
+    line.append(prompt, document.createTextNode(" "), typed);
+    terminal.appendChild(line);
+
+    for (const char of text) {
+        typed.textContent += char;
+        await wait(32 + Math.random() * 28);
+    }
+    await wait(180);
+}
+
+async function runTerminal() {
+    if (reduceMotion) {
+        terminalSequence.forEach(item => {
+            const line = document.createElement("p");
+            if (item.type === "command") {
+                line.innerHTML = '<b>›</b> ';
+                line.append(document.createTextNode(item.text));
+            } else {
+                line.className = item.type === "status" ? "output status" : "output";
+                line.textContent = item.text;
+            }
+            terminal.appendChild(line);
+        });
+        addCursor();
+        return;
+    }
+
+    await wait(450);
+    for (const item of terminalSequence) {
+        if (item.type === "command") {
+            await typeCommand(item.text);
+        } else {
+            const line = document.createElement("p");
+            line.className = item.type === "status" ? "output status terminal-reveal" : "output terminal-reveal";
+            line.textContent = item.text;
+            terminal.appendChild(line);
+            await wait(105);
+        }
+    }
+    addCursor();
+}
+
+runTerminal();
+</script>
 </body>
 </html>

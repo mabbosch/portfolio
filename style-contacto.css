@@ -1,0 +1,1130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+
+/* ==================================================
+   VARIABLES
+   ================================================== */
+
+:root {
+    --bg: #030b12;
+    --text: #f2f6f7;
+    --muted: #9cb5c2;
+
+    --cyan: #16d7ef;
+    --purple: #b84df2;
+    --green: #00e991;
+
+    --line: #194252;
+    --max: 1440px;
+}
+
+
+/* ==================================================
+   GENERAL
+   ================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    color: var(--text);
+
+    background:
+        radial-gradient(
+            circle at 75% 20%,
+            rgba(16, 109, 139, 0.08),
+            transparent 28%
+        ),
+        linear-gradient(
+            180deg,
+            #030b12 0%,
+            #061019 100%
+        );
+
+    background-attachment: fixed;
+
+    font-family: "Inter", sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+.topbar {
+    min-height: 68px;
+
+    padding:
+        0
+        max(28px, calc((100vw - var(--max)) / 2));
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 50;
+
+    border-bottom:
+        1px solid rgba(35, 83, 101, 0.58);
+
+    background:
+        rgba(3, 10, 16, 0.90);
+
+    backdrop-filter: blur(14px);
+}
+
+
+.brand {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.brand strong {
+    font:
+        700
+        0.86rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing: 0.045em;
+}
+
+
+.brand span {
+    color: #82a1b0;
+
+    font:
+        500
+        0.58rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* NAVEGACIÓN */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+
+.main-nav a {
+    position: relative;
+
+    padding:
+        25px 0
+        22px;
+
+    color: #92aab6;
+
+    font:
+        500
+        0.63rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing: 0.055em;
+}
+
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: var(--cyan);
+}
+
+
+.main-nav a.active::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 10px;
+
+    width: 28px;
+    height: 2px;
+
+    background: var(--cyan);
+
+    transform: translateX(-50%);
+
+    box-shadow:
+        0 0 10px rgba(22, 215, 239, 0.55);
+}
+
+
+/* ==================================================
+   CONTENIDO PRINCIPAL
+   ================================================== */
+
+main {
+    max-width: var(--max);
+
+    margin: auto;
+
+    padding:
+        0
+        28px;
+}
+
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.88fr
+        1.12fr;
+
+    gap: 68px;
+
+    align-items: center;
+
+    padding:
+        78px 10px
+        60px;
+}
+
+
+/* ==================================================
+   COLUMNA IZQUIERDA
+   ================================================== */
+
+.eyebrow {
+    color: var(--cyan);
+
+    font:
+        600
+        0.7rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing: 0.12em;
+}
+
+
+.contact-copy h1 {
+    margin:
+        44px 0
+        24px;
+
+    font-size:
+        clamp(
+            3.5rem,
+            5.8vw,
+            5.7rem
+        );
+
+    line-height: 0.95;
+
+    letter-spacing: -0.055em;
+}
+
+
+.contact-copy h1 span {
+    color: var(--cyan);
+
+    text-shadow:
+        0 0 22px
+        rgba(22, 215, 239, 0.22);
+}
+
+
+.contact-copy > p {
+    max-width: 520px;
+
+    margin:
+        0 0
+        14px;
+
+    color: var(--muted);
+
+    font-size: 0.96rem;
+
+    line-height: 1.65;
+}
+
+
+/* ==================================================
+   OPEN TO WORK
+   ================================================== */
+
+.open-work {
+    width: 235px;
+
+    margin:
+        28px 0
+        30px;
+
+    padding:
+        12px 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 15px;
+
+    border:
+        1px solid
+        var(--green);
+
+    border-radius: 5px;
+
+    background:
+        rgba(0, 233, 145, 0.025);
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 233, 145, 0.08);
+
+    font:
+        600
+        0.66rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing: 0.13em;
+}
+
+
+.open-work i {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    background:
+        var(--green);
+
+    box-shadow:
+        0 0 12px
+        rgba(0, 233, 145, 0.75);
+}
+
+
+/* ==================================================
+   DATOS DE CONTACTO
+   ================================================== */
+
+.contact-links {
+    max-width: 610px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.contact-row {
+    min-height: 61px;
+
+    display: grid;
+
+    grid-template-columns:
+        130px
+        minmax(30px, 1fr)
+        minmax(175px, 1.5fr)
+        118px;
+
+    gap: 18px;
+
+    align-items: center;
+
+    font:
+        500
+        0.68rem
+        "JetBrains Mono",
+        monospace;
+}
+
+
+.contact-row strong {
+    font-size: 0.64rem;
+
+    letter-spacing: 0.05em;
+}
+
+
+.contact-row .cyan {
+    color: var(--cyan);
+}
+
+
+.contact-row .line {
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--cyan),
+            transparent
+        );
+}
+
+
+.contact-row > span:nth-child(3) {
+    color: #a9c0cb;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+/* BOTONES PEQUEÑOS */
+
+.contact-row button,
+.contact-row a {
+    min-height: 39px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border:
+        1px solid
+        var(--cyan);
+
+    border-radius: 5px;
+
+    background:
+        rgba(4, 16, 25, 0.8);
+
+    color: white;
+
+    cursor: pointer;
+
+    font:
+        600
+        0.62rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing: 0.05em;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.contact-row button:hover,
+.contact-row a:hover {
+    background:
+        var(--cyan);
+
+    color:
+        #021017;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 18px
+        rgba(22, 215, 239, 0.14);
+}
+
+
+/* ==================================================
+   FORMULARIO
+   ================================================== */
+
+.form-shell {
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(59, 117, 139, 0.68);
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(5, 18, 27, 0.92),
+            rgba(3, 12, 19, 0.80)
+        );
+
+    box-shadow:
+        0 25px 65px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+/* línea violeta superior */
+
+.form-shell::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 240px;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            to left,
+            var(--purple),
+            transparent
+        );
+}
+
+
+/* CABECERA FORMULARIO */
+
+.form-title {
+    min-height: 58px;
+
+    padding:
+        0 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid
+        rgba(40, 87, 104, 0.55);
+
+    color:
+        var(--cyan);
+
+    font:
+        600
+        0.68rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing:
+        0.08em;
+}
+
+
+.form-title div {
+    display: flex;
+
+    gap: 7px;
+}
+
+
+.form-title i {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background:
+        var(--cyan);
+}
+
+
+.form-title i:nth-child(2),
+.form-title i:nth-child(3) {
+    background:
+        var(--purple);
+}
+
+
+/* ==================================================
+   CAMPOS DEL FORMULARIO
+   ================================================== */
+
+form {
+    padding:
+        28px 30px
+        25px;
+}
+
+
+.two-fields {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 18px;
+}
+
+
+label {
+    display: block;
+
+    margin-bottom:
+        21px;
+}
+
+
+label > span {
+    display: block;
+
+    margin-bottom:
+        9px;
+
+    color:
+        #d7e4e8;
+
+    font:
+        600
+        0.61rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing:
+        0.06em;
+}
+
+
+label b {
+    color:
+        #ff526c;
+}
+
+
+input,
+textarea {
+    width: 100%;
+
+    border:
+        1px solid
+        #35677b;
+
+    border-radius:
+        5px;
+
+    outline:
+        none;
+
+    color:
+        #e8f2f5;
+
+    background:
+        rgba(2, 10, 16, 0.46);
+
+    font:
+        400
+        0.78rem
+        "JetBrains Mono",
+        monospace;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+
+input {
+    height:
+        47px;
+
+    padding:
+        0 14px;
+}
+
+
+textarea {
+    min-height:
+        128px;
+
+    padding:
+        14px;
+
+    resize:
+        vertical;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color:
+        #668b9c;
+}
+
+
+input:focus,
+textarea:focus {
+    border-color:
+        var(--cyan);
+
+    background:
+        rgba(4, 20, 28, 0.72);
+
+    box-shadow:
+        0 0 0 2px
+        rgba(22, 215, 239, 0.07);
+}
+
+
+/* ==================================================
+   BOTÓN ENVIAR
+   ================================================== */
+
+.submit-button {
+    width:
+        58%;
+
+    min-width:
+        280px;
+
+    min-height:
+        54px;
+
+    margin-left:
+        auto;
+
+    display:
+        block;
+
+    border:
+        1px solid
+        var(--purple);
+
+    border-radius:
+        5px;
+
+    background:
+        #07131d;
+
+    color:
+        #f1f6f8;
+
+    cursor:
+        pointer;
+
+    font:
+        600
+        0.68rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing:
+        0.08em;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.submit-button:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 0 25px
+        rgba(184, 77, 242, 0.15);
+}
+
+
+.submit-button em {
+    color:
+        var(--cyan);
+
+    font-style:
+        normal;
+}
+
+
+.form-note {
+    margin:
+        12px 0 0;
+
+    color:
+        #547481;
+
+    text-align:
+        right;
+
+    font:
+        400
+        0.54rem
+        "JetBrains Mono",
+        monospace;
+}
+
+
+/* ==================================================
+   FINAL DEL PORTFOLIO
+   ================================================== */
+
+.portfolio-end {
+    position:
+        relative;
+
+    padding:
+        38px 20px
+        52px;
+
+    border-top:
+        1px solid
+        rgba(28, 77, 94, 0.70);
+
+    text-align:
+        center;
+}
+
+
+.end-code {
+    position:
+        absolute;
+
+    top:
+        -13px;
+
+    left:
+        50%;
+
+    padding:
+        0 17px;
+
+    background:
+        var(--bg);
+
+    color:
+        var(--cyan);
+
+    transform:
+        translateX(-50%);
+
+    font:
+        600
+        1.15rem
+        "JetBrains Mono",
+        monospace;
+}
+
+
+.portfolio-end h2 {
+    margin:
+        7px 0
+        20px;
+
+    font:
+        600
+        1rem
+        "JetBrains Mono",
+        monospace;
+
+    letter-spacing:
+        0.09em;
+}
+
+
+.heart-line {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        14px;
+
+    margin-bottom:
+        17px;
+}
+
+
+.heart-line span {
+    width:
+        110px;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            to right,
+            transparent,
+            var(--cyan)
+        );
+}
+
+
+.heart-line span:last-child {
+    background:
+        linear-gradient(
+            to left,
+            transparent,
+            var(--cyan)
+        );
+}
+
+
+.heart-line b {
+    color:
+        var(--purple);
+
+    font-size:
+        1.7rem;
+
+    font-weight:
+        400;
+}
+
+
+.portfolio-end p {
+    margin:
+        0;
+
+    color:
+        var(--cyan);
+
+    font:
+        500
+        0.7rem
+        "JetBrains Mono",
+        monospace;
+}
+
+
+.portfolio-end p > span:first-child {
+    color:
+        #90aab6;
+}
+
+
+/* CURSOR */
+
+.cursor {
+    display:
+        inline-block;
+
+    animation:
+        blink
+        1s
+        steps(1)
+        infinite;
+}
+
+
+@keyframes blink {
+
+    50% {
+        opacity:
+            0;
+    }
+
+}
+
+
+/* ==================================================
+   RESPONSIVE
+   ================================================== */
+
+@media (max-width: 1050px) {
+
+    .main-nav {
+        gap:
+            17px;
+    }
+
+    .contact-layout {
+        grid-template-columns:
+            1fr;
+
+        gap:
+            50px;
+    }
+
+    .contact-copy > p {
+        max-width:
+            650px;
+    }
+
+    .contact-links {
+        max-width:
+            720px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .topbar {
+        align-items:
+            flex-start;
+
+        flex-direction:
+            column;
+
+        padding-top:
+            17px;
+
+        padding-bottom:
+            10px;
+    }
+
+
+    .main-nav {
+        width:
+            100%;
+
+        overflow-x:
+            auto;
+
+        gap:
+            20px;
+    }
+
+
+    .main-nav a {
+        padding:
+            10px 0
+            13px;
+
+        white-space:
+            nowrap;
+    }
+
+
+    .main-nav a.active::after {
+        bottom:
+            4px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    main {
+        padding:
+            0 18px;
+    }
+
+
+    .contact-layout {
+        padding-top:
+            48px;
+
+        padding-left:
+            0;
+
+        padding-right:
+            0;
+    }
+
+
+    .contact-copy h1 {
+        margin-top:
+            30px;
+
+        font-size:
+            3.4rem;
+    }
+
+
+    .two-fields {
+        grid-template-columns:
+            1fr;
+    }
+
+
+    form {
+        padding:
+            24px 18px;
+    }
+
+
+    .submit-button {
+        width:
+            100%;
+
+        min-width:
+            0;
+    }
+
+
+    .form-note {
+        text-align:
+            left;
+    }
+
+
+    .contact-row {
+        grid-template-columns:
+            110px
+            1fr
+            100px;
+
+        gap:
+            12px;
+
+        padding:
+            8px 0;
+    }
+
+
+    .contact-row .line {
+        display:
+            none;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .contact-copy h1 {
+        font-size:
+            2.85rem;
+    }
+
+
+    .portfolio-end h2 {
+        font-size:
+            0.78rem;
+
+        line-height:
+            1.5;
+    }
+
+
+    .heart-line span {
+        width:
+            60px;
+    }
+
+}

@@ -1,77 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Writeups | Marta Bargués</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Writeups de ciberseguridad de Marta Bargués: TryHackMe, Hack The Box, HackerLabs, DockerLabs y Vulnyx.">
+  <title>Writeups | Marta Bargués</title>
+  <link rel="stylesheet" href="style-writeups.css">
 </head>
+
 <body>
 
-<div class="layout">
+<header class="topbar">
+  <a class="brand" href="index.html">
+    <strong>MARTA BARGUÉS</strong>
+    <span>CIBERSEGURIDAD · SISTEMAS · REDES · CLOUD</span>
+  </a>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
+  <nav class="main-nav" aria-label="Navegación principal">
+    <a href="index.html">INICIO</a>
+    <a href="proyectos.html">PROYECTOS</a>
+    <a href="formacion.html">FORMACIÓN</a>
+    <a href="apuntes.html">APUNTES</a>
+    <a class="active" href="writeups.html">WRITEUPS</a>
+    <a href="contacto.html">CONTACTO</a>
+  </nav>
+</header>
 
-        <div class="logo">
-            <h2>Marta Bargués</h2>
-            <p>Systems · Networks · Security</p>
+<main>
 
-            <img src="imagen3.png" class="profile-photo" alt="profile">
+  <section class="writeups-hero">
+    <div class="hero-copy">
+      <span class="eyebrow">03 / WRITEUPS</span>
+
+      <h1>
+        Máquinas.<br>
+        Enumeración.<br>
+        Explotación. <span>PrivEsc._</span>
+      </h1>
+
+      <p>
+        Documentación y resolución de máquinas vulnerables en entornos
+        controlados, desde la enumeración hasta la explotación y escalada
+        de privilegios.
+      </p>
+
+      <div class="skills" aria-label="Tecnologías y áreas">
+        <span>LINUX</span>
+        <span>WINDOWS</span>
+        <span>WEB</span>
+        <span>PRIVESC</span>
+        <span>AD</span>
+        <span>CMS</span>
+        <span>CTF</span>
+      </div>
+    </div>
+
+    <div class="hero-lab" aria-label="Representación visual de los repositorios de writeups">
+      <div class="ambient-lines"></div>
+
+      <div class="terminal terminal-main">
+        <div class="terminal-bar">
+          <i></i><i></i><i></i>
+          <span>marta@kali:~/writeups</span>
         </div>
 
-       <nav>
-            <a href="index.html">Home</a>
-            <a href="proyectos.html">Proyectos</a>
-            <a href="apuntes.html">Apuntes</a>
-            <a href="writeups.html">Writeups</a>
-            <a href="contacto.html">Contacto</a>
-        </nav>
+        <div class="terminal-body">
+          <p><b>marta@kali</b>:<em>~/writeups</em>$ ls ./labs/</p>
+          <div class="tree">
+            <span>├── <strong class="thm">tryhackme/</strong></span>
+            <span>├── <strong class="htb">hackthebox/</strong></span>
+            <span>├── <strong class="hl">hackerlabs/</strong></span>
+            <span>├── <strong class="docker">dockerlabs/</strong></span>
+            <span>└── <strong class="vulnyx">vulnyx/</strong></span>
+          </div>
+          <p class="cursor-line">└─$ <span class="cursor"></span></p>
+        </div>
+      </div>
 
-    </aside>
+      <div class="terminal terminal-side">
+        <div class="terminal-bar compact"><span>workflow.sh</span></div>
+        <div class="terminal-body workflow">
+          <span>&gt; RECON</span>
+          <span>&gt; ENUMERATION</span>
+          <span>&gt; EXPLOITATION</span>
+          <span>&gt; PRIVESC</span>
+          <span>&gt; POST-EXPLOIT</span>
+        </div>
+      </div>
 
-    <!-- CONTENT -->
-    <main class="content">
-
-        <section class="hero">
-            <h1>Writeups</h1>
-            <p>
-                Documentación y resolución de máquinas en entornos de práctica
-                de ciberseguridad.
-            </p>
-        </section>
-
-        <section class="grid">
-
-            <a class="platform-card" href="https://github.com/mabbosch/thm-writeups" target="_blank">
-                <h2>TryHackMe</h2>
-            </a>
-
-            <a class="platform-card" href="https://github.com/mabbosch/htb-writeups" target="_blank">
-                <h2>Hack The Box</h2>
-                
-            </a>
-
-            <a class="platform-card" href="#" target="_blank">
-                <h2>HackerLabs</h2>
-               
-            </a>
-
-            <a class="platform-card" href="https://github.com/mabbosch/Dockerlabs" target="_blank">
-                <h2>DockerLabs</h2>
-               
-            </a>
+      <div class="book-stack" aria-hidden="true">
+        <span>LINUX</span>
+        <span>PENTESTING</span>
+        <span>NETWORKING</span>
+        <span>CYBERSECURITY</span>
+      </div>
+    </div>
+  </section>
 
 
-            <a class="platform-card" href="https://github.com/mabbosch/Vulnyx" target="_blank">
-                <h2>Vulnyx</h2>
-            </a>
+  <section class="platforms">
+    <div class="section-heading">
+      <div>
+        <span class="eyebrow">PLATAFORMAS</span>
+        <h2>Mis writeups <span>por plataforma</span></h2>
+      </div>
 
-        </section>
+      <p class="section-note">
+        La documentación está organizada por plataforma en sus respectivos
+        repositorios de GitHub.
+      </p>
+    </div>
 
-    </main>
+    <div class="platform-flow">
 
-</div>
+      <a class="platform platform-thm"
+         href="https://github.com/mabbosch/thm-writeups"
+         target="_blank" rel="noopener noreferrer">
+        <div class="platform-number">01</div>
+        <div class="platform-icon" aria-hidden="true">☁</div>
+        <div class="platform-content">
+          <h3>TryHackMe</h3>
+          <p>Learning paths, rooms y laboratorios prácticos de ciberseguridad.</p>
+          <span class="repo-link">VER EN GITHUB ↗</span>
+        </div>
+      </a>
+
+      <a class="platform platform-htb"
+         href="https://github.com/mabbosch/htb-writeups"
+         target="_blank" rel="noopener noreferrer">
+        <div class="platform-number">02</div>
+        <div class="platform-icon cube" aria-hidden="true">◇</div>
+        <div class="platform-content">
+          <h3>Hack The Box</h3>
+          <p>Máquinas y retos de diferentes niveles.</p>
+          <span class="repo-link">VER EN GITHUB ↗</span>
+        </div>
+      </a>
+
+      <div class="platform platform-hl pending">
+        <div class="platform-number">03</div>
+        <div class="platform-icon flask" aria-hidden="true">⚗</div>
+        <div class="platform-content">
+          <h3>HackerLabs</h3>
+          <p>Máquinas y escenarios para practicar pentesting.</p>
+          <span class="repo-link pending-label">WRITEUPS PENDIENTES DE SUBIR</span>
+        </div>
+      </div>
+
+      <a class="platform platform-docker"
+         href="https://github.com/mabbosch/Dockerlabs"
+         target="_blank" rel="noopener noreferrer">
+        <div class="platform-number">04</div>
+        <div class="platform-icon docker-icon" aria-hidden="true">▦</div>
+        <div class="platform-content">
+          <h3>DockerLabs</h3>
+          <p>Máquinas Linux y Windows para práctica de pentesting.</p>
+          <span class="repo-link">VER EN GITHUB ↗</span>
+        </div>
+      </a>
+
+      <a class="platform platform-vulnyx"
+         href="https://github.com/mabbosch/Vulnyx"
+         target="_blank" rel="noopener noreferrer">
+        <div class="platform-number">05</div>
+        <div class="platform-icon shield" aria-hidden="true">⬡</div>
+        <div class="platform-content">
+          <h3>Vulnyx</h3>
+          <p>Máquinas enfocadas a pentesting y explotación.</p>
+          <span class="repo-link">VER EN GITHUB ↗</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <span>© 2026 Marta Bargués</span>
+  <span>WRITEUPS · LABS · CIBERSEGURIDAD</span>
+</footer>
 
 </body>
 </html>
